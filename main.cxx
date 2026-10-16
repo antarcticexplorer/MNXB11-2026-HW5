@@ -4,6 +4,7 @@
  * */
 
 #include "as1.hpp"
+#include "as2.hpp"
 #include <iostream>
 
 using namespace homework;
@@ -25,7 +26,21 @@ int main() {
     d.set(30);
     std::cout << d.get() << "\n";
 
+    // 2.1
+    Knight king("Baldwin");
+    king.attack();
+    king.setWeapon("knife");
+    king.attack();
+    std::unique_ptr<Entity> knightClone = king.clone();
+    knightClone->attack();
 
-  
+    // 2.2
+    Sorcerer sc("Wiz");
+    sc.attack();
+    sc.setAbility("lightning");
+    sc.attack();
+    std::unique_ptr<Entity> sorcererClone = sc.clone();
+    sorcererClone->attack();
+
 }
 
