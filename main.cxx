@@ -9,6 +9,23 @@
 using namespace homework;
 
 int main() { 
+    // as1 test 1.1
+    int x = 1, y = 2, z = 3;
+    int *a = &x, *b = &y, *c = &z;
+
+    swap_ptr(a, b, c);
+
+    std::cout << "*a: " << *a << "\n";
+    std::cout << "*b: " << *b << "\n";
+    std::cout << "*c: " << *c << "\n";
+
+    // 1.2
+    UniqueData d(12);
+    std::cout << d.get() << "\n";
+    d.set(30);
+    std::cout << d.get() << "\n";
+
+
   
 }
 
